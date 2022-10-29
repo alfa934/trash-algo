@@ -33,3 +33,17 @@ int main()  {
 	
 	return 0;  
 }  
+/* INPUTS
+3
+18
+november 22nd 1919
+36
+n$e ve#- rg%&on$ n#ag i've y&o u:up-
+28
+i don't wanna be you anymore
+ 
+OUTPUTS
+Case #1: novembernd
+Case #2: nevergonnagiveyouup
+Case #3: idontwannbeyouanymore
+*/
