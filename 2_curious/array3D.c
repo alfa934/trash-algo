@@ -16,7 +16,7 @@ int main() {
     printf("%-17s %-17s %-17s \n", "[NAME]", "[ANIMAL]", "[GENDER]");
     printf("------------------------------------------------\n");
     for(int i = 0; i < HEIGHT; i++) {
-        for(int j = 0; j < 3; j++) {
+        for(int j = 0; j < WIDTH; j++) {
             printf(" %-17s", arr[i][j]);
         }
         printf("\n");
