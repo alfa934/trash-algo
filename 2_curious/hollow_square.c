@@ -15,7 +15,7 @@ int main() {
             for (int j = 0; j < WIDTH; j++) {
                 if(i == 0 || i == HEIGHT - 1) 
                     printf("*  ");
-                else if(j == 0 || j == WIDTH -1) 
+                else if(j == 0 || j == WIDTH - 1) 
                     printf("*  ");
                 else 
                     printf("   ");
@@ -26,6 +26,6 @@ int main() {
     } else {
         printf("INVALID INPUT\n");
     }
-    
+
     return 0;
 }
