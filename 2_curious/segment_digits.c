@@ -76,8 +76,6 @@ void SegmentDigits(int number) {
         printf("    |\n");
         printf(" --- \n");
         break;
-    default:
-        break;
     }
 }
 
