@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include <string.h>
 
-const char *upperString(char string[]) {
+const char *UpperString(char string[]) {
     for(int i = 0; string[i] != '\0' ; i++) 
     {
         string[i] = toupper(string[i]);
@@ -10,7 +10,7 @@ const char *upperString(char string[]) {
     return string;
 }
 
-const char *lowerString(char string[]) {
+const char *LowerString(char string[]) {
     for(int i = 0; string[i] != '\0' ; i++) 
     {
         string[i] = tolower(string[i]);
@@ -18,15 +18,37 @@ const char *lowerString(char string[]) {
     return string;
 }
 
-int main() {
-    char string[] = "hElLo WoRlD";
-    char upper[50], lower[50]; 
+const char *TitleString(char string[]) {
+    /* Lowers all characters first */
+    for(int i = 0; string[i] != '\0' ; i++) 
+    {
+        string[i] = tolower(string[i]);
+    }
+    /* Uppers first letter of each word */
+    for(int i = 0; string[i] != '\0' ; i++) 
+    {
+        if(i == 0 || string[i - 1] == ' ') 
+        {
+            string[i] = toupper(string[i]);
+        }
+    }
+    return string;
+}
 
-    strcpy(upper, upperString(string));
-    strcpy(lower, lowerString(string));
+int main() {
+    char string[50]; 
+    char upper[50], lower[50], title[50]; 
+
+    printf("Enter String: ");
+    gets(string);
+
+    strcpy(upper, UpperString(string));
+    strcpy(lower, LowerString(string));
+    strcpy(title, TitleString(string));
 
     printf("%s \n", upper);
     printf("%s \n", lower);
+    printf("%s \n", title);
 
     return 0;
 }
