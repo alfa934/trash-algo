@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <string.h>
+
+#define STRLEN(array) (sizeof(array)/sizeof(*array) - 1)
 
 int height = 10, width = 25, cnt = 0; // change dimension of output
 
@@ -13,7 +14,7 @@ void Seperator() {
 
 void PrintLetters() {
 	char letters[] = "abcdefghijklmnopqrstuvwxyz";
-	int strLength = strlen(letters);
+	int strLength = STRLEN(letters);
 
 	for(int i = 0; i < width - 2; i++) {
 		if(cnt == strLength) {
