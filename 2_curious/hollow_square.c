@@ -22,9 +22,9 @@ int main() {
     }
 
     Sepertator(WIDTH);
-    for(int i = 1; i < HEIGHT - 1; i++) {
+    for(int i = 0; i < HEIGHT - 2; i++) {
         printf("*  ");
-        for (int j = 1; j < WIDTH - 1; j++) {
+        for (int j = 0; j < WIDTH - 2; j++) {
             printf("   ");
         }
         printf("*\n");
