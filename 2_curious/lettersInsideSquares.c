@@ -4,13 +4,11 @@
 int height = 10, width = 25, cnt = 0; // change dimension of output
 
 void Seperator() {
-	for(int i = 0; i < width; i++) {
-		if(i == 0 || i == width - 1) {
-			printf("+");
-		} else
-			printf("-"); 
+	printf("+");
+	for(int i = 0; i < width - 2; i++) {
+		printf("-"); 
 	}
-	printf("\n"); 
+	printf("+\n"); 
 }
 
 void PrintLetters() {
@@ -37,7 +35,7 @@ int main() {
 		PrintLetters();
 		printf("|\n");
 	}
-	
+
 	/* print bottom line */
 	Seperator();
 
