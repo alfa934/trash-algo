@@ -1,10 +1,16 @@
 #include <stdio.h>
 
-void Sepertator(int width) {
+void Seperator(int width) {
     for(int i = 0; i < width; i++) {
         printf("*  ");
     }
     printf("\n");
+}
+
+void PrintSpaces(int width) {
+    for (int j = 0; j < width - 2; j++) {
+        printf("   ");
+    }
 }
 
 int main() {
@@ -21,14 +27,16 @@ int main() {
          return -1;
     }
 
-    Sepertator(WIDTH);
+    Seperator(WIDTH);
+
     for(int i = 0; i < HEIGHT - 2; i++) {
         printf("*  ");
-        for (int j = 0; j < WIDTH - 2; j++) {
-            printf("   ");
-        }
+        PrintSpaces(WIDTH);
         printf("*\n");
     }
-    Sepertator(WIDTH);
+
+    if(HEIGHT > 1)
+        Seperator(WIDTH);
+        
     return 0;
 }
